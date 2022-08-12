@@ -7,8 +7,6 @@ const image="https://jaipurchalo.com/wp-content/uploads/2020/07/Tapri-ashram-Jai
 const title="Tapri Ashram";
 const description="Eat .Drink .Celebrate     ⭐(3K+)";
 
-
-
 export default function About() {
   return (
     <View>

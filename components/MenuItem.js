@@ -1,6 +1,7 @@
 import {View, Text, StyleSheet, Image, ScrollView} from 'react-native';
 import React from 'react';
 import { Divider } from '@rneui/base';
+import BouncyCheckbox from 'react-native-bouncy-checkbox';
 
 const foods = [
   {
@@ -10,33 +11,40 @@ const foods = [
     image:
       'https://images.unsplash.com/photo-1571934811356-5cc061b6821f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1167&q=80',
   },
-  {
-    title: 'Tea',
-    description: 'with Ginger, cardamon, Black Pepper, Rose, cinnamon',
+  { 
+    title: 'Coffee',
+    description: 'With Milk, Handbeaten, Separate Sugar',
     price: 120,
     image:
-      'https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
+      'https://images.unsplash.com/photo-1509042239860-f550ce710b93?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y29mZmVlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60',
+  },
+  {
+    title: 'Green Tea',
+    description: 'Without Milk, Separate Sugar',
+    price: 120,
+    image:
+      'https://images.unsplash.com/photo-1576092762793-c0e9395ec4b9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80',
   },
   {
     title: 'Tea',
-    description: 'with Ginger, cardamon, Black Pepper, Rose, cinnamon',
+    description: 'With Ginger, cardamon, Black Pepper, Rose, cinnamon',
     price: 120,
     image:
-      'https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
+      'https://images.unsplash.com/photo-1571934811356-5cc061b6821f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1167&q=80',
+  },
+  { 
+    title: 'Coffee',
+    description: 'With Milk, Handbeaten, Separate Sugar',
+    price: 120,
+    image:
+      'https://images.unsplash.com/photo-1509042239860-f550ce710b93?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y29mZmVlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60',
   },
   {
-    title: 'Tea',
-    description: 'with Ginger, cardamon, Black Pepper, Rose, cinnamon',
+    title: 'Green Tea',
+    description: 'Without Milk, Separate Sugar',
     price: 120,
     image:
-      'https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
-  },
-  {
-    title: 'Tea',
-    description: 'with Ginger, cardamon, Black Pepper, Rose, cinnamon',
-    price: 120,
-    image:
-      'https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
+      'https://images.unsplash.com/photo-1576092762793-c0e9395ec4b9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80',
   },
 ];
 
@@ -64,10 +72,13 @@ export default function MenuItem() {
     {foods.map((food,index)=>(
       <View key={index}>
         <View style={styles.menuItemStyle}>
+          <BouncyCheckbox  iconStyle={{ borderColor: "lightgray", borderRadius: 0 }}
+                fillColor="green"
+               />
           <FoodInfo food={food} />
           <FoodImage food={food} />
         </View>
-        <Divider width={0.5} orientation="vertical"/>
+        <Divider width={0.5} orientation="vertical" style={{marginHorizontal:20}}/>
       </View>
       ))}
     </ScrollView>

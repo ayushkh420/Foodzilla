@@ -7,11 +7,12 @@ import ReasturantItem from '../components/ReasturantItem';
 import { Divider } from "@rneui/themed";
 import BottomTab from '../components/BottomTab';
 
+
 // const YELP_API_KEY =
 //   "bdRJutLhFAQJ36t7b89CWjHFBU4OKzjt9wvZzcY-nkgmvTqlNMjZWV1eG7iBQ9R74SyfxRg9LWnBAkZY06BtAZAe4d2dfX-2vuX8a1l5V7foctHfX9UKEyoM5ts3YXYx";
 
   
-  export default function Home() {
+  export default function Home({navigation}) {
     // const [restaurantData, setRestaurantData] = useState(localRestaurants);
 
 
@@ -39,7 +40,7 @@ import BottomTab from '../components/BottomTab';
       </View>
       <ScrollView showsVerticalScrollIndicator={false}>
       <Categories/>
-      <ReasturantItem/>
+      <ReasturantItem navigation={navigation} />
       </ScrollView>
       <Divider width={1}/>
       <BottomTab/>
