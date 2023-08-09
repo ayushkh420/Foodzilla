@@ -1,9 +1,23 @@
 # Foodzilla
 A food delivery app which helps you to choose your favorite food items and get delivered to your doorsteps.
 
-#Technologies
-1. React Native
-2. Yelp API
-3. Redux
-4. Google API
-5. Firebase
+
+### Tools and technology
+- React Native
+- Yelp API
+- Firebase (Authentication & Firestore)
+- Google API
+- Redux
+- react-navigation
+
+
+## Extra Features
+
+- Login & Sign up
+- Fully Custom Clean Design
+- Custom Bottom Tab Navigation
+- New Browse Screen
+- New Cart Screen
+- New Restaurant Screen
+
+
